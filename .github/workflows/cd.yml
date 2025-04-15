@@ -18,6 +18,6 @@ jobs:
           go-version: "1.23.0"
 
       - name: Build
-        run: scripts/buildprod.sh
+        run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o notely
 
       
